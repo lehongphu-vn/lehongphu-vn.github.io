@@ -1,222 +1,557 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lê Hồng Phú | Kỹ sư Điện - Hệ thống điện</title>
+<title>Lê Hồng Phú | Điện Nước - Năng Lượng Mặt Trời - Lọc Nước Lâm Đồng</title>
 
-  <meta name="description" content="Website cá nhân của Lê Hồng Phú - Kỹ sư Điện, chuyên ngành Hệ thống điện. Kinh nghiệm trong lĩnh vực điện, thủy điện, bảo trì sửa chữa thiết bị điện và thi công điện.">
+<meta name="description" content="Lê Hồng Phú - Kỹ sư điện. Nhận thi công điện nước, máy nước nóng năng lượng mặt trời, xử lý nước đầu nguồn, lọc RO tại Lâm Đồng. Cung cấp bồn nước, máy nước nóng năng lượng và cột lọc nước.">
+<meta name="author" content="Lê Hồng Phú">
 
-  <meta name="author" content="Lê Hồng Phú">
-  <meta name="robots" content="index, follow">
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#1f2937;
+    background:#f4f7fb;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#063970,#0077b6);
+    color:white;
+    padding:55px 20px 45px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:6px;
+}
+
+header h2{
+    font-size:21px;
+    font-weight:500;
+    margin-bottom:14px;
+}
+
+header p{
+    max-width:800px;
+    margin:auto;
+    opacity:.95;
+}
+
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.call{
+    background:#ffb703;
+    color:#222;
+}
+
+.zalo{
+    background:#fff;
+    color:#0068ff;
+}
+
+.facebook{
+    background:#1877f2;
+    color:white;
+    border:1px solid white;
+}
+
+nav{
+    background:#052f5f;
+    padding:13px 10px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 14px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:42px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#064b83;
+    font-size:29px;
+    margin-bottom:10px;
+}
+
+.section-desc{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 30px;
+    color:#5b6573;
+}
+
+.intro{
+    background:white;
+    border-radius:15px;
+    padding:28px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.highlight{
+    color:#0068a9;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:26px 22px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border-top:4px solid #0784c1;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#064b83;
+    margin-bottom:10px;
+}
+
+.services{
+    background:#eaf5fb;
+}
+
+.products{
+    background:white;
+}
+
+.product-card{
+    background:#f7fafc;
+    border-radius:14px;
+    padding:24px;
+    border:1px solid #e2e8f0;
+}
+
+.product-card h3{
+    color:#075985;
+    margin-bottom:8px;
+}
+
+.cta{
+    background:linear-gradient(135deg,#063970,#0096c7);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.cta h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:22px;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.profile-box{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.profile-box h3{
+    color:#064b83;
+    margin-bottom:12px;
+}
+
+.profile-box ul{
+    padding-left:20px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.phone{
+    font-size:31px;
+    color:#d62828;
+    font-weight:bold;
+    margin:10px 0 20px;
+}
+
+footer{
+    background:#052f5f;
+    color:white;
+    text-align:center;
+    padding:25px 15px 90px;
+}
+
+.floating{
+    position:fixed;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:calc(100% - 24px);
+    max-width:600px;
+    background:white;
+    border-radius:40px;
+    padding:7px;
+    display:flex;
+    gap:7px;
+    z-index:999;
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+
+.floating a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:11px 5px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.f-call{
+    background:#ef4444;
+    color:white;
+}
+
+.f-zalo{
+    background:#0068ff;
+    color:white;
+}
+
+.f-fb{
+    background:#1877f2;
+    color:white;
+}
+
+@media(max-width:800px){
+    header{
+        padding-top:40px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      color: #1f2937;
-      background: #f5f7fa;
+    header h1{
+        font-size:32px;
     }
 
-    header {
-      background: linear-gradient(135deg, #073763, #0b5394);
-      color: white;
-      padding: 65px 20px;
-      text-align: center;
+    header h2{
+        font-size:18px;
     }
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 8px;
+    .grid,
+    .profile-grid{
+        grid-template-columns:1fr;
     }
 
-    header h2 {
-      font-size: 21px;
-      font-weight: normal;
+    nav a{
+        display:inline-block;
+        margin:5px 7px;
+        font-size:13px;
     }
 
-    nav {
-      background: #062b4f;
-      padding: 13px;
-      text-align: center;
-      position: sticky;
-      top: 0;
+    .container{
+        padding:32px 16px;
     }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 14px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 25px 20px;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    h2 {
-      color: #0b5394;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e8f1fb;
-      color: #073763;
-      padding: 7px 12px;
-      margin: 5px;
-      border-radius: 20px;
-    }
-
-    footer {
-      text-align: center;
-      background: #062b4f;
-      color: white;
-      padding: 25px;
-      margin-top: 30px;
-    }
-
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 7px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>LÊ HỒNG PHÚ</h1>
-  <h2>Kỹ sư Điện | Chuyên ngành Hệ thống điện</h2>
-  <p>Website cá nhân: lehongphu.com</p>
+    <h1>LÊ HỒNG PHÚ</h1>
+    <h2>KỸ SƯ ĐIỆN • ĐIỆN NƯỚC • XỬ LÝ & LỌC NƯỚC</h2>
+
+    <p>
+        Thi công kỹ thuật – Lắp đặt – Sửa chữa – Bảo trì<br>
+        Cung cấp thiết bị điện nước, năng lượng mặt trời và hệ thống lọc nước
+    </p>
+
+    <div class="hero-buttons">
+        <a class="btn call" href="tel:0989497562">☎ GỌI NGAY: 0989 497 562</a>
+        <a class="btn zalo" href="https://zalo.me/0989497562">ZALO TƯ VẤN</a>
+        <a class="btn facebook" href="https://www.facebook.com/locnuoclamdong">FACEBOOK</a>
+    </div>
 </header>
 
 <nav>
-  <a href="#gioithieu">Giới thiệu</a>
-  <a href="#hocvan">Học vấn</a>
-  <a href="#chuyenmon">Chuyên môn</a>
-  <a href="#congviec">Công việc</a>
-  <a href="#dichvu">Dịch vụ</a>
-  <a href="#lienhe">Liên hệ</a>
+    <a href="#gioithieu">GIỚI THIỆU</a>
+    <a href="#dichvu">DỊCH VỤ</a>
+    <a href="#sanpham">SẢN PHẨM</a>
+    <a href="#chuyenmon">CHUYÊN MÔN</a>
+    <a href="#lienhe">LIÊN HỆ</a>
 </nav>
 
+<section id="gioithieu">
 <div class="container">
 
-<section id="gioithieu">
-  <h2>Giới thiệu</h2>
-  <p>
-    Xin chào! Tôi là <strong>Lê Hồng Phú</strong>, kỹ sư điện,
-    chuyên ngành <strong>Hệ thống điện</strong>.
-  </p>
+<h2 class="section-title">Kỹ thuật tận tâm – Giải pháp phù hợp</h2>
 
-  <p>
-    Tôi có kinh nghiệm trong công tác kiểm tra, bảo trì, sửa chữa
-    thiết bị điện và hệ thống điện trong nhà máy thủy điện,
-    đồng thời thực hiện các công việc thi công và kỹ thuật điện.
-  </p>
+<p class="section-desc">
+Tư vấn, thi công và cung cấp giải pháp điện nước – năng lượng mặt trời – xử lý nước
+cho gia đình, công trình và cơ sở kinh doanh.
+</p>
+
+<div class="intro">
+<p>
+Xin chào! Tôi là <span class="highlight">Lê Hồng Phú – Kỹ sư điện, chuyên ngành Hệ thống điện</span>.
+Bên cạnh công việc chuyên môn trong lĩnh vực điện và thủy điện, tôi nhận tư vấn,
+thi công và hỗ trợ các công trình điện nước, hệ thống nước nóng năng lượng mặt trời
+và xử lý – lọc nước.
+</p>
+
+<br>
+
+<p>
+Mục tiêu là đưa ra giải pháp <strong>an toàn – hiệu quả – dễ vận hành – phù hợp nhu cầu thực tế</strong>,
+đồng thời hỗ trợ khách hàng từ khâu lựa chọn thiết bị đến lắp đặt, vận hành và bảo trì.
+</p>
+</div>
+
+</div>
 </section>
 
-<section id="hocvan">
-  <h2>Trình độ & Học vấn</h2>
-  <ul>
-    <li>Trình độ văn hóa: 12/12</li>
-    <li>Trình độ chuyên môn: Kỹ sư Điện</li>
-    <li>Chuyên ngành: Hệ thống điện</li>
-    <li>Cao đẳng Điện lực TP. Hồ Chí Minh</li>
-    <li>Đại học Nha Trang</li>
-  </ul>
+<section id="dichvu" class="services">
+<div class="container">
+
+<h2 class="section-title">DỊCH VỤ NỔI BẬT</h2>
+<p class="section-desc">Tư vấn và thi công theo nhu cầu thực tế của từng công trình.</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Điện dân dụng & công trình</h3>
+<p>
+Thi công, sửa chữa và cải tạo hệ thống điện; tủ điện, chiếu sáng,
+ổ cắm, thiết bị bảo vệ và các hạng mục điện dân dụng – công trình.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>Thi công điện nước</h3>
+<p>
+Lắp đặt, sửa chữa và cải tạo hệ thống cấp thoát nước cho nhà ở,
+cơ sở kinh doanh và công trình.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">☀️</div>
+<h3>Nước nóng năng lượng mặt trời</h3>
+<p>
+Tư vấn lựa chọn, cung cấp, lắp đặt, sửa chữa và bảo trì
+máy nước nóng năng lượng mặt trời.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚰</div>
+<h3>Xử lý nước đầu nguồn</h3>
+<p>
+Khảo sát nguồn nước và tư vấn hệ thống xử lý nước đầu nguồn
+phù hợp với nhu cầu sử dụng thực tế.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💦</div>
+<h3>Hệ thống lọc RO</h3>
+<p>
+Tư vấn, lắp đặt và bảo trì hệ thống lọc RO,
+thay lõi và kiểm tra hệ thống lọc nước.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Sửa chữa & bảo trì</h3>
+<p>
+Kiểm tra, xử lý sự cố và bảo trì các hệ thống điện,
+nước, lọc nước và thiết bị liên quan.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="sanpham" class="products">
+<div class="container">
+
+<h2 class="section-title">CUNG CẤP & PHÂN PHỐI</h2>
+
+<p class="section-desc">
+Tư vấn lựa chọn thiết bị phù hợp với công trình và nhu cầu sử dụng.
+</p>
+
+<div class="grid">
+
+<div class="product-card">
+<h3>🛢️ Bồn nước</h3>
+<p>
+Cung cấp các loại bồn chứa nước phục vụ gia đình,
+công trình và cơ sở kinh doanh.
+</p>
+</div>
+
+<div class="product-card">
+<h3>☀️ Máy nước nóng năng lượng mặt trời</h3>
+<p>
+Cung cấp thiết bị và giải pháp lắp đặt hệ thống nước nóng
+năng lượng mặt trời.
+</p>
+</div>
+
+<div class="product-card">
+<h3>💧 Cột lọc nước</h3>
+<p>
+Cung cấp cột lọc và thiết bị phục vụ hệ thống xử lý nước
+đầu nguồn và lọc nước.
+</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <section id="chuyenmon">
-  <h2>Lĩnh vực chuyên môn</h2>
+<div class="container">
 
-  <span class="tag">Hệ thống điện</span>
-  <span class="tag">Máy phát điện</span>
-  <span class="tag">Máy biến áp</span>
-  <span class="tag">Động cơ điện</span>
-  <span class="tag">Thiết bị điện</span>
-  <span class="tag">Bảo vệ - đo lường</span>
-  <span class="tag">Đường dây điện</span>
-  <span class="tag">Bảo trì - sửa chữa</span>
+<h2 class="section-title">HỒ SƠ CHUYÊN MÔN</h2>
+
+<p class="section-desc">
+Nền tảng kỹ thuật giúp tư vấn và triển khai công việc theo hướng an toàn và thực tế.
+</p>
+
+<div class="profile-grid">
+
+<div class="profile-box">
+<h3>🎓 Học vấn</h3>
+<ul>
+<li>Trình độ văn hóa: 12/12</li>
+<li>Trình độ chuyên môn: Kỹ sư điện</li>
+<li>Chuyên ngành: Hệ thống điện</li>
+<li>Cao đẳng Điện lực TP.HCM</li>
+<li>Đại học Nha Trang</li>
+</ul>
+</div>
+
+<div class="profile-box">
+<h3>⚙️ Chuyên môn kỹ thuật</h3>
+<ul>
+<li>Hệ thống điện và thiết bị điện</li>
+<li>Kiểm tra, sửa chữa và bảo trì</li>
+<li>Điện dân dụng – điện công trình</li>
+<li>Hệ thống cấp thoát nước</li>
+<li>Nước nóng năng lượng mặt trời</li>
+<li>Xử lý và lọc nước</li>
+</ul>
+</div>
+
+</div>
+</div>
 </section>
 
-<section id="congviec">
-  <h2>Công việc & Kinh nghiệm</h2>
+<section class="cta">
+<h2>CẦN TƯ VẤN ĐIỆN – NƯỚC – LỌC NƯỚC?</h2>
 
-  <p>
-    Công tác trong lĩnh vực điện và thủy điện, thực hiện và
-    tổ chức các công việc kiểm tra, bảo dưỡng, sửa chữa hệ thống
-    và thiết bị điện.
-  </p>
+<p>
+Gọi hoặc nhắn Zalo để trao đổi nhu cầu và phương án thực hiện.
+</p>
 
-  <ul>
-    <li>Kiểm tra và bảo dưỡng thiết bị điện định kỳ.</li>
-    <li>Sửa chữa máy phát, máy biến áp và động cơ điện.</li>
-    <li>Kiểm tra hệ thống bảo vệ, đo lường và điều khiển.</li>
-    <li>Kiểm tra, bảo dưỡng đường dây điện.</li>
-    <li>Lập phương án kỹ thuật và đề xuất vật tư sửa chữa.</li>
-    <li>Tổ chức và triển khai công việc kỹ thuật điện.</li>
-  </ul>
-</section>
-
-<section id="dichvu">
-  <h2>Lĩnh vực thi công & Dịch vụ điện</h2>
-
-  <ul>
-    <li>Tư vấn và thi công hệ thống điện dân dụng.</li>
-    <li>Thi công điện công trình.</li>
-    <li>Lắp đặt tủ điện và thiết bị điện.</li>
-    <li>Kiểm tra, bảo trì và sửa chữa hệ thống điện.</li>
-    <li>Tư vấn lựa chọn dây dẫn, CB và thiết bị bảo vệ.</li>
-    <li>Kiểm tra và xử lý các sự cố điện.</li>
-  </ul>
+<a class="btn call" href="tel:0989497562">
+☎ 0989 497 562
+</a>
 </section>
 
 <section id="lienhe">
-  <h2>Liên hệ</h2>
+<div class="container contact">
 
-  <p>
-    Website chính thức:
-    <strong>lehongphu.com</strong>
-  </p>
+<h2 class="section-title">LIÊN HỆ</h2>
 
-  <p>
-    Thông tin liên hệ sẽ được cập nhật tại đây.
-  </p>
-</section>
+<p><strong>LÊ HỒNG PHÚ</strong></p>
+<p>Kỹ sư điện – Dịch vụ kỹ thuật điện nước & xử lý nước</p>
 
+<div class="phone">☎ 0989 497 562</div>
+
+<div class="hero-buttons">
+<a class="btn call" href="tel:0989497562">GỌI ĐIỆN</a>
+<a class="btn zalo" href="https://zalo.me/0989497562">NHẮN ZALO</a>
+<a class="btn facebook" href="https://www.facebook.com/locnuoclamdong">FACEBOOK</a>
 </div>
 
+</div>
+</section>
+
 <footer>
-  © 2026 Lê Hồng Phú • Kỹ sư Điện - Hệ thống điện
+<p><strong>LÊ HỒNG PHÚ</strong></p>
+<p>Điện • Nước • Năng lượng mặt trời • Xử lý & lọc nước</p>
+<p>Website: lehongphu.com</p>
+<p>© 2026 Lê Hồng Phú</p>
 </footer>
+
+<div class="floating">
+<a class="f-call" href="tel:0989497562">☎ GỌI</a>
+<a class="f-zalo" href="https://zalo.me/0989497562">ZALO</a>
+<a class="f-fb" href="https://www.facebook.com/locnuoclamdong">FACEBOOK</a>
+</div>
 
 </body>
 </html>
